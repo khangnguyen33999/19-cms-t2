@@ -486,9 +486,12 @@ if ( $can_edit_terms ) {
 		<p><?php _e( 'Assign a parent term to create a hierarchy. The term Jazz, for example, would be the parent of Bebop and Big Band.' ); ?></p>
 	<?php endif; ?>
 </div>
+<label for="tag-description">Email:</label>
+<input type="email" name="email" required placeholder="Input your email">
 	<?php endif; // is_taxonomy_hierarchical() ?>
 <div class="form-field term-description-wrap">
 	<label for="tag-description"><?php _e( 'Description' ); ?></label>
+
 	<textarea name="description" id="tag-description" rows="5" cols="40"></textarea>
 	<p><?php _e( 'The description is not prominent by default; however, some themes may show it.' ); ?></p>
 </div>

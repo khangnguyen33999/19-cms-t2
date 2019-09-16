@@ -102,6 +102,7 @@ if ( 'auto-draft' === $post->post_status ) {
 	// Override "(Auto Draft)" new post default title with empty string, or filtered value.
 	$initial_edits = array(
 		'title'   => $post->post_title,
+		'email'=> $post->post_email,
 		'content' => $post->post_content,
 		'excerpt' => $post->post_excerpt,
 	);
@@ -274,6 +275,8 @@ $editor_settings = array(
 	'disablePostFormats'     => ! current_theme_supports( 'post-formats' ),
 	/** This filter is documented in wp-admin/edit-form-advanced.php */
 	'titlePlaceholder'       => apply_filters( 'enter_title_here', __( 'Add title' ), $post ),
+
+
 	'bodyPlaceholder'        => $body_placeholder,
 	'isRTL'                  => is_rtl(),
 	'autosaveInterval'       => AUTOSAVE_INTERVAL,
@@ -411,7 +414,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 			<p>
 				<?php
 					$message = sprintf(
-						/* translators: %s: Classic Editor plugin URL */
+						/* translators: %s: Classic Editor pluginsgin URL */
 						__( 'The block editor requires JavaScript. Please enable JavaScript in your browser settings, or try the <a href="%s">Classic Editor plugin</a>.' ),
 						__( 'https://wordpress.org/plugins/classic-editor/' )
 					);
