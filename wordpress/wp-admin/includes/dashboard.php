@@ -521,6 +521,7 @@ function wp_dashboard_quick_press( $error_msg = false ) {
 				<?php
 				/** This filter is documented in wp-admin/edit-form-advanced.php */
 				echo apply_filters( 'enter_title_here', __( 'Title' ), $post );
+				echo apply_filters( 'ente_email_here', __( 'Email' ), $post );
 				?>
 			</label>
 			<input type="text" name="post_title" id="title" autocomplete="off" />

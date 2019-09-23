@@ -485,10 +485,12 @@ do_action( 'edit_form_top', $post );
 	 * @param WP_Post $post Post object.
 	 */
 	$title_placeholder = apply_filters( 'enter_title_here', __( 'Add title' ), $post );
-
+	$email_placeholder = apply_filters( 'enter_email_here', __( 'Add email' ), $post );
 	?>
 	<label class="screen-reader-text" id="title-prompt-text" for="title"><?php echo $title_placeholder; ?></label>
 	<input type="text" name="post_title" size="30" value="<?php echo esc_attr( $post->post_title ); ?>" id="title" spellcheck="true" autocomplete="off" />
+	<label class="screen-reader-text" id="mail-prompt-text" for="mail" style="margin-top:20px"><?php echo $email_placeholder; ?></label>
+	<input type="email" name="post_email" size="30" value="<?php echo esc_attr( $post->post_title ); ?>" id="email" spellcheck="true" autocomplete="off" />
 
 </div>
 	<?php
@@ -501,6 +503,7 @@ do_action( 'edit_form_top', $post );
 	 */
 	do_action( 'edit_form_before_permalink', $post );
 	?>
+	
 <div class="inside">
 	<?php
 	if ( $viewable ) :

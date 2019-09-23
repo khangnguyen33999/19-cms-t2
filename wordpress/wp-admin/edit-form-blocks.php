@@ -264,7 +264,7 @@ if ( $user_id ) {
  * @param string  $text Placeholder text. Default 'Start writing or type / to choose a block'.
  * @param WP_Post $post Post object.
  */
-$body_placeholder = apply_filters( 'write_your_story', __( 'Start writing or type / to choose a block' ), $post );
+$body_placeholder = apply_filters( 'write_your_story', __( 'Add email' ), $post );
 
 $editor_settings = array(
 	'alignWide'              => $align_wide,
@@ -274,9 +274,8 @@ $editor_settings = array(
 	'disableCustomFontSizes' => get_theme_support( 'disable-custom-font-sizes' ),
 	'disablePostFormats'     => ! current_theme_supports( 'post-formats' ),
 	/** This filter is documented in wp-admin/edit-form-advanced.php */
-	'titlePlaceholder'       => apply_filters( 'enter_title_here', __( 'Add title' ), $post ),
-
-
+	'titlePlaceholder'       => apply_filters( 'enter_title_here', __( 'Add Title' ), $post ),
+	'emailPlaceholder'       => apply_filters( 'enter_email_here', __( 'Add Email' ), $post ),
 	'bodyPlaceholder'        => $body_placeholder,
 	'isRTL'                  => is_rtl(),
 	'autosaveInterval'       => AUTOSAVE_INTERVAL,
