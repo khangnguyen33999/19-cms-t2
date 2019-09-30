@@ -1,0 +1,20 @@
+/*
+Theme Name: Theme Custom
+Author: Khang
+Version: 1.0
+ */
+h1{
+    text-align: center;
+    color:green;
+    background-color:yellow;
+    font-size: 100px
+}
+.text-center{
+    background-color: aqua;
+    text-align: center;
+}
+.text-content{
+    background-color:slateblue;
+    text-align: center;
+
+}

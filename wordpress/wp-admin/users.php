@@ -551,8 +551,8 @@ switch ( $wp_list_table->current_action() ) {
 		<?php
 		if ( current_user_can( 'create_users' ) ) {
 			?>
-	<a href="<?php echo admin_url( 'user-new.php' ); ?>" class="page-title-action"><?php echo esc_html_x( 'Add User', 'user' ); ?></a>
-		<a href="<?php echo admin_url( 'user-new.php' ); ?>" class="page-title-action"><?php echo esc_html_x( 'Delete User', 'user' ); ?></a>
+	<a href="<?php echo admin_url( 'user-new.php' ); ?>" class="page-title-action"><?php echo esc_html_x( 'Add USER', 'user' ); ?></a>
+	<a href="<?php echo admin_url( 'user-new.php' ); ?>" class="page-title-action"><?php echo esc_html_x( 'Add user lần nữa', 'user' ); ?></a>
 <?php } elseif ( is_multisite() && current_user_can( 'promote_users' ) ) { ?>
 	<a href="<?php echo admin_url( 'user-new.php' ); ?>" class="page-title-action"><?php echo esc_html_x( 'Add Existing', 'user' ); ?></a>
 			<?php
@@ -565,11 +565,11 @@ if ( strlen( $usersearch ) ) {
 ?>
 
 <hr class="wp-header-end">
-			
-		<?php $wp_list_table->views();?>
+
+		<?php $wp_list_table->views(); ?>
 
 <form method="get">
-		
+
 		<?php $wp_list_table->search_box( __( 'Search Users' ), 'user' ); ?>
 
 		<?php if ( ! empty( $_REQUEST['role'] ) ) { ?>
