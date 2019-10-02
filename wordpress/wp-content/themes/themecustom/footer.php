@@ -1,2 +1,5 @@
+
+<h1>Đây là footer nè</h1>
+</body>
+</html>
 <?php wp_footer(); ?>
-<h1>Đây là Footer!</h1>
