@@ -10,23 +10,28 @@
 
 <?php wp_head(); ?>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default fix">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">CMS TEST</a>
+    <div class="logo">
+      <a class="navbar-brand no-padding" href="#"><img src="<?php echo get_site_url(); ?>/wp-content/uploads/2019/10/logongang-301x88.jpg" alt="logo"></a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="<?php echo get_site_url(); ?>/home">Home</a></li>
-      <li><a href="<?php echo get_site_url(); ?>/list">Danh sách</a></li>
+    </div>
+    <ul class="nav navbar-nav background-header" style="margin-right:-20px; float:unset">
+      <li><a href="<?php echo get_site_url(); ?>/home">Trang chủ</a></li>
+      <li><a href="<?php echo get_site_url(); ?>/list">Tiệc Cưới</a></li>
+      <li><a href="<?php echo get_site_url(); ?>/list">Hội Nghị</a></li>
+      <li><a href="<?php echo get_site_url(); ?>/list">Tin Tức</a></li>
       <li><a href="<?php echo get_site_url(); ?>/contact">Liên hệ</a></li>
-     <li><?php echo '<form class="form-inline" role="search" method="get" id="searchform" action="' . home_url('/') . '" > 
+      <?php echo '<form class="form-inline" role="search" method="get" id="searchform" action="' . home_url('/') . '" > 
 	<input class="form-control" type="text" value="' . get_search_query() . '" placeholder="Tìm kiếm....." name="s" id="s" />
 	<button type="submit" id="searchsubmit" value="Search" class="btn btn-primary"><i class="fa fa-search"></i>Search</button>
-    </form>' ?></li>
+    </form>' ?>
     </ul>
+    
   </div>
 </nav>
   
-<div class="container">
+<div class="container"></div>
 
 
